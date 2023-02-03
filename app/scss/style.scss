@@ -22,7 +22,7 @@
   }
   &__list-link {
     color: $title;
-    padding-bottom: 1px;
+    padding: 0 2px 1px;
     transition: all .3s;
     @extend %roboto-400;
     &:hover {
