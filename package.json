@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@fancyapps/ui": "^4.0.31",
     "browser-sync": "^2.27.11",
     "del": "6.1.1",
     "gulp": "^4.0.2",
