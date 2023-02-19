@@ -22,6 +22,11 @@ body {
   padding: 0 15px;
 }
 
+.top-container {
+  max-width: 1700px;
+  margin: 0 auto;
+}
+
 a {
   font-size: 16px;
   line-height: 26px;
@@ -43,4 +48,45 @@ a {
   max-width: 570px;
   text-align: center;
   margin: 0 auto 55px;
+}
+
+.breadcrumbs {
+  padding-left: 25px;
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/icons/home-icon.svg');
+  }
+  &__list {
+    display: flex;
+    margin: 0;
+  }
+  &__item {
+    padding-right: 40px;
+    color: #727272;
+    position: relative;
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 9px;
+      right: 15px;
+      width: 9px;
+      height: 10px;
+      background-image: url('../images/icons/angle-right.svg');
+    }
+    &:last-child {
+      padding-right: 0;
+      color: $accent;
+    }
+  }
+  &__link {
+    color: inherit;
+  }
 }
