@@ -767,4 +767,53 @@
   }
 }
 
+.modal {
+  max-width: 570px;
+  margin: 0 auto 115px;
+  padding-top: 100px;
+  &__links {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  &__link {
+    margin: 0 30px;
+    @extend %roboto-400;
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #909090;
+  }
+  &__link--active {
+    color: $accent;
+  }
+  &__label {
+    display: block;
+    margin-bottom: 30px;
+  }
+  &__input {
+    display: block;
+    width: 100%;
+    margin-top: 4px;
+    height: 60px;
+    padding: 0 15px;
+    border: none;
+    background-color: $bg;
+  }
+  &__btn {
+    display: block;
+    width: 100%;
+    padding: 14px 0;
+    border: none;
+    background-color: $title;
+    cursor: pointer;
+    @extend %roboto-400;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  &__error {
+    display: inline-block;
+    margin-top: 12px;
+    color: $accent;
+  }
+}
+
 @import 'media';
