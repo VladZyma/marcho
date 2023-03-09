@@ -2034,4 +2034,150 @@
   }
 }
 
+.blog-one {
+  &__text {
+    padding: 30px;
+    border: 1px solid #ececec;
+    border-top: none;
+
+    h4 {
+      margin: 25px 0;
+      @extend %roboto-500;
+      font-size: 22px;
+      color: $title;
+    }
+
+    p {
+      margin: 25px 0;
+    }
+
+    blockquote {
+      margin: 25px 0;
+      padding: 35px;
+      background-color: $bg;
+      border-left: 3px solid $accent;
+      @extend %roboto-400;
+      font-size: 22px;
+      color: $title;
+    }
+  }
+
+  &__left-img {
+    margin-right: 30px;
+    margin-bottom: 10px;
+    float: left;
+  }
+
+  &__right-img {
+    margin-left: 30px;
+    margin-bottom: 10px;
+    float: right;
+  }
+
+  &__info {
+    margin: 0 0 25px;
+    display: flex;
+  }
+
+  &__info-link {
+    margin-right: 30px;
+    padding-left: 28px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+      background-image: url('../images/icons/calendar.svg');
+    }
+  }
+
+  &__info-link--author::before {
+    background-image: url('../images/icons/user-comment.svg');
+  }
+
+  &__info-link--comment::before {
+    background-image: url('../images/icons/user-blog.svg');
+  }
+
+  &__form-title {
+    margin: 35px 0 25px;
+    @extend %roboto-700;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: $title;
+  }
+
+  .comments-form {
+    border-bottom: none;
+  }
+
+  &__box {
+    margin: 25px 0 35px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__tags,
+  &__share {
+    span {
+      @extend %roboto-700;
+      text-transform: uppercase;
+      color: $title;
+    }
+  }
+
+  &__share {
+    a {
+      margin: 0 6px;
+      display: inline-block;
+      vertical-align: middle;
+      transition: all .3s;
+
+      path {
+        fill: #727272;
+      }
+
+      &:hover {
+        path {
+          fill: $accent;
+        }
+      }
+    }
+  }
+
+  &__author {
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    border-bottom: 1px solid #ececec;
+  }
+
+  &__author-img {
+    margin-right: 30px;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+  }
+
+  &__author-name {
+    margin-bottom: 24px;
+    @extend %roboto-500;
+    font-size: 22px;
+    color: $title;
+  }
+
+  .comments-title {
+    margin-bottom: 25px;
+    @extend %roboto-700;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: $title;
+  }
+}
+
 @import 'media';
